@@ -174,7 +174,7 @@ class WordVectors(object):
                 vector = np.fromstring(fin.read(binary_len), dtype=np.float32)
                 if include:
                     vectors[i] = unitvec(vector)
-                fin.read(1)  # newline
+                # fin.read(1)  # newline
 
             if desired_vocab is not None:
                 vectors = vectors[vocab != '', :]
